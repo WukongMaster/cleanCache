@@ -2,8 +2,6 @@
 
 # 一键脚本：安装基础组件并配置清理缓存和日志的定时任务
 # 支持 CentOS / Ubuntu / Debian
-# 当前日期: 2025-03-08
-# 作者: Grok 3 (xAI)
 
 # 检查是否以root用户运行
 if [ "$EUID" -ne 0 ]; then
@@ -82,8 +80,8 @@ echo "设置脚本权限..."
 chmod -R 755 /opt/script/cron || { echo "错误：权限设置失败"; exit 1; }
 
 # 配置定时任务
-echo "配置定时任务（每9分钟运行一次）..."
-(crontab -l 2>/dev/null; echo "*/9 * * * * sh /opt/script/cron/cleanCache.sh") | crontab - || { echo "错误：定时任务配置失败"; exit 1; }
+echo "配置定时任务（每30分钟运行一次）..."
+(crontab -l 2>/dev/null; echo "*/30 * * * * sh /opt/script/cron/clean.sh") | crontab - || { echo "错误：定时任务配置失败"; exit 1; }
 
 # 重启cron服务
 echo "重启cron服务..."
@@ -96,21 +94,7 @@ fi
 # 显示完成信息
 echo "====================================="
 echo "脚本执行完毕！"
-echo "定时任务已设置，每9分钟运行一次 /opt/script/cron/cleanCache.sh"
-echo "====================================="
-
-# 显示广告内容
-echo ""
-echo "================ 广告 ================"
-echo "“VPS小内存硬盘日志定时清理工具”是为了针对系统如何清理VPS自动缓存，保持系统的清洁与活力的小工具，喜欢的朋友可以给我们点亮我们的小星星"
-echo ""
-echo "VPS小内存硬盘日志定时清理工具, 作者: Vmshell INC, 是美国怀俄明注册正规企业，现注册有自有网络运营ASN号: 147002;"
-echo "提供香港CMI线路高速网络云计算中心和美国云计算中心，小巧灵动的VPS为全球网络提供全方位服务，"
-echo "官网订购地址: https://vmshell.com/;"
-echo "企业高速网络: https://tototel.com/;"
-echo "TeleGram讨论: https://t.me/vmshellhk;"
-echo "TeleGram频道: https://t.me/vmshell;"
-echo "提供微信/支付宝/美国PayPal/USDT/比特币/支付(3日内无条件退款);"
+echo "定时任务已设置，每9分钟运行一次 /opt/script/cron/clean.sh"
 echo "====================================="
 
 # 交互式重启提示（红色和绿色搭配）
