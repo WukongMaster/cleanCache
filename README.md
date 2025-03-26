@@ -1,11 +1,4 @@
-<p>“VPS小内存硬盘日志定时清理工具”是为了针对系统如何清理VPS自动缓存,保持系统的清洁与活力的小工具,喜欢的朋友可以给我们点亮我们的小星星<br />
-VPS小内存硬盘日志定时清理工具,作者:Vmshell INC,是美国怀俄明注册正规企业,现注册有自有网络运营ASN号:147002;提供香港CMI线路高速网络云计算中心和美国云计算中心,小巧灵动的VPS为全球网络提供全方位服务,<br />
-官网订购地址: https://vmshell.com/;<br />
-企业高速网络: https://tototel.com/;<br />
-TeleGram讨论:https://t.me/vmshellhk;<br />
-TeleGram频道:https://t.me/vmshell;<br />
-提供微信/支付宝/美国PayPal/USDT/比特币/支付(3日内无条件退款);</p>
-<p><img class="alignnone size-full wp-image-43181" title="images-2" src="https://linuxword.com/wp-content/uploads/2025/03/images-2.jpg" alt="images-2" width="307" height="164" /></p>
+
 <p>登录VPS的SSH之后，执行如下代码后reboot重启服务器<br />
 第一步：创建文件夹和文件名：<br />
 mkdir -p /opt/script/cron &amp;&amp; vim /opt/script/cron/cleanCache.sh<br />
