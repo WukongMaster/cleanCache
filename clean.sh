@@ -81,7 +81,7 @@ chmod -R 755 /opt/script/cron || { echo "错误：权限设置失败"; exit 1; }
 
 # 配置定时任务
 echo "配置定时任务（每30分钟运行一次）..."
-(crontab -l 2>/dev/null; echo "*/30 * * * * sh /opt/script/cron/clean.sh") | crontab - || { echo "错误：定时任务配置失败"; exit 1; }
+(crontab -l 2>/dev/null; echo "*/30 * * * * sh /opt/script/cron/cleanCache.sh") | crontab - || { echo "错误：定时任务配置失败"; exit 1; }
 
 # 重启cron服务
 echo "重启cron服务..."
