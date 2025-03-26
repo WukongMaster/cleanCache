@@ -4,4 +4,4 @@
 ## 在线安装
 在SSH中运行以下命令：
 
-bash <(curl -sL https://raw.githubusercontent.com/WukongMaster/cleanCache/refs/heads/main/clean.sh)
+bash <(curl -sL https://raw.githubusercontent.com/WukongMaster/cleanCache/main/clean.sh)
